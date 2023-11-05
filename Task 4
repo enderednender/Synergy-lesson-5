@@ -1,0 +1,10 @@
+algebra_solvers = set(input().split())
+geometry_solvers = set(input().split())
+trigonometry_solvers = set(input().split())
+
+common_solvers = algebra_solvers.intersection(geometry_solvers, trigonometry_solvers)
+if common_solvers:
+    common_solvers = sorted(common_solvers)
+    print(" ".join(common_solvers))
+else:
+    print("Все три задачи никто не решил")
