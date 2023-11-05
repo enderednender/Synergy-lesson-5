@@ -1,0 +1,16 @@
+n = int(input("Введите количество городов: "))
+cities = []
+for _ in range(n):
+    city = input()
+    cities.append(city)
+
+city_set = set()
+duplicate_cities = set()
+
+for city in cities:
+    if city in city_set:
+        duplicate_cities.add(city)
+    else:
+        city_set.add(city)
+
+print("Количество городов с повторяющимися названиями:", len(duplicate_cities))
