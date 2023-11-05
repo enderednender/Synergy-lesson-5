@@ -1,0 +1,20 @@
+def capitalize_text(text):
+    sentences = re.split(r'(?<=[.!?]) ', text)
+
+    corrected_sentences = []
+    for sentence in sentences:
+        sentence = sentence.strip()
+        if sentence:
+            sentence = sentence[0].upper() + sentence[1:]
+            corrected_sentences.append(sentence)
+
+    corrected_text = ' '.join(corrected_sentences)
+
+    return corrected_text
+
+import re
+
+input_text = input("Введите текст: ")
+corrected_text = capitalize_text(input_text)
+print("Исправленный текст:")
+print(corrected_text)
